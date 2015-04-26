@@ -12,8 +12,8 @@ import java.util.GregorianCalendar;
  * @author Victor
  */
 public class Pratica31 {
-    private static String meuNome = "Andreia Schwalbe Koda";
-    private static GregorianCalendar dataNascimento = new GregorianCalendar(1995, 7, 23);
+    private static String meuNome = "Victor Thölken";
+    private static GregorianCalendar dataNascimento = new GregorianCalendar(1994, 9, 14);
     private static Date inicio, fim;
     
     public static void main(String[] args) {
@@ -23,10 +23,9 @@ public class Pratica31 {
         
         String nomeFormatado;
         
-        nomeFormatado = meuNome.substring(17, 18).toUpperCase() +
-                meuNome.substring(18, 21).toLowerCase() + ", "
-                + meuNome.substring(0, 1).toUpperCase() + ". "
-                + meuNome.substring(8, 9).toUpperCase() + ".";
+        nomeFormatado = meuNome.substring(7, 8).toUpperCase() +
+                meuNome.substring(8, 12).toLowerCase() + ", "
+                + meuNome.substring(0, 1).toUpperCase() + ". ";
         
         System.out.println(nomeFormatado + "\n");
         
