@@ -30,7 +30,7 @@ public class Pratica31 {
         System.out.println(nomeFormatado + "\n");
         
         System.out.println((inicio.getTime() - dataNascimento.getTimeInMillis())
-        %(1000*3600*24));
+        /(1000*3600*24));
         
         fim = new Date();
         
