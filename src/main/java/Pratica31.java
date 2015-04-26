@@ -1,5 +1,3 @@
-import static java.lang.Character.toUpperCase;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
@@ -8,53 +6,38 @@ import java.util.GregorianCalendar;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 /**
  *
  * @author Victor
  */
 public class Pratica31 {
-    
-    private static String MeuNome;
-    private static Date inicio;
-    private static GregorianCalendar dataNascimento;
+    private static String meuNome = "Andreia Schwalbe Koda";
+    private static GregorianCalendar dataNascimento = new GregorianCalendar(1995, 7, 23);
+    private static Date inicio, fim;
     
     public static void main(String[] args) {
-
-        MeuNome = "vICTor tHöLKen";
         inicio = new Date();
-
-        String Maisculo = MeuNome.toUpperCase();
-        String Sobrenome;
-        char InicialNome;
-        char InicialSobrenome;
-
-        MeuNome = MeuNome.toUpperCase();
-
-        System.out.println(MeuNome);
-
-        Sobrenome = MeuNome.substring(8);
-        Sobrenome = Sobrenome.toLowerCase();
-        InicialSobrenome = MeuNome.charAt(7);
-        InicialSobrenome = toUpperCase(InicialSobrenome);
-        InicialNome = MeuNome.charAt(0);
-        InicialNome = toUpperCase(InicialNome);
-
-        System.out.println(InicialSobrenome + Sobrenome + ", " + InicialNome + ".");
-
-        Calendar dataAtual = Calendar.getInstance();
-
-        dataNascimento = new GregorianCalendar(1994, 9, 14);
-
-        long dif = dataAtual.getTimeInMillis() - dataNascimento.getTimeInMillis();
-        dif = dif/1000/60/60/24;
         
-        System.out.println("Tempo em dias decorridos apartir do nascimento até hoje: " + dif);
-
-        Date fim = new Date();
-
-        long tempo = fim.getTime() - inicio.getTime();
-
-        System.out.println(tempo + "ms");
+        System.out.println(meuNome.toUpperCase());
+        
+        String nomeFormatado;
+        
+        nomeFormatado = meuNome.substring(17, 18).toUpperCase() +
+                meuNome.substring(18, 21).toLowerCase() + ", "
+                + meuNome.substring(0, 1).toUpperCase() + ". "
+                + meuNome.substring(8, 9).toUpperCase() + ".";
+        
+        System.out.println(nomeFormatado + "\n");
+        
+        System.out.println((inicio.getTime() - dataNascimento.getTimeInMillis())
+        %(1000*3600*24));
+        
+        fim = new Date();
+        
+        long ms = fim.getTime() - inicio.getTime();
+        
+        System.out.println(ms);
+        
     }
-
 }
